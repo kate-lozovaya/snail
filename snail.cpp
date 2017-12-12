@@ -8,7 +8,7 @@ int ** fill(unsigned int rows, unsigned int columns)
 	int ** matrix = new int * [rows]();
 	for (unsigned int i = 0; i < rows; ++i)
 	{
-		matrix[i] = new int[columns]();
+		matrix[i] = new int[rows](); //columns
 	}
 
 
@@ -88,7 +88,7 @@ int main()
 	matrix = fill(rows, columns);
 	for (int i = 0; i < rows; ++i)
 	{
-		for (int j = 0; j < columns; ++j)
+		for (int j = 0; j < columns; ++i) //++j
 		{
 			std::cout << std::setw(4) << matrix[i][j];
 		}
